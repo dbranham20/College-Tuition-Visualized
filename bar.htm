@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<meta charset="utf-8"/>
+<html>
+	<head>
+		<script src="https://code.highcharts.com/highcharts.js"></script>
+		<script src="https://code.highcharts.com/modules/exporting.js"></script>
+		<script src="https://code.highcharts.com/modules/export-data.js"></script>
+	</head>
+	<body>
+		<div id="container" style="width:2000px; height: 1200px; margin: 0 auto"></div>
+		
+    <script language = "JavaScript">
+    	Highcharts.chart('container', {
+			chart: {
+				type: 'bar'
+			},
+			title: {
+				text: '4 Years of College Tuition - $90,300'
+			},
+			xAxis: {
+				categories: ['Fall 2015', 'Spring 2016', 'Fall 2016', 'Spring 2017', 'Fall 2017', 'Spring 2018', 'Fall 2018', 'Spring 2019']
+			},
+			yAxis: {
+				min: 0,
+				title: {
+					text: 'College Tuition by Semester'
+				}
+			},
+			legend: {
+				reversed: true
+			},
+			plotOptions: {
+				series: {
+					stacking: 'normal'
+				}
+			},
+			series: [{
+				name: 'Fees',
+				data: [365, 75, 115, 150, 125, 215, 120, 70 ]
+			}, {
+				name: 'Welcome Week',
+				data: [40,]
+			}, {
+				name: 'Parking Pass',
+				data: [75,0,75,0,0,0,100]
+			}, {
+				name: 'Meal Plan',
+				data: [1590, 1590, 1620, 1620, 684, 684]
+			}, {
+				name: 'In-State Tuition',
+				data: [7228, 7228, 7405, 7405, 7610, 7610, 7795, 7795]
+			}, {
+				name: 'Housing/Rent',
+				data: [2560, 2560, 2683, 2683, 2125, 2125, 2250, 2250]
+			}, {
+				name: 'Parking Ticket',
+				data: [0,0,50]
+			}
+			]
+		});
+      </script>;
+   </body>
+</html>
